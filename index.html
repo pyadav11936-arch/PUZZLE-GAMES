@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PY Gaming | 8 Puzzle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="game-container">
+    <header>
+      <div class="logo">PY <span>GAMING</span></div>
+      <p class="tagline">THINK • MOVE • WIN</p>
+    </header>
+
+    <section class="game-card">
+      <h1>8 Puzzle</h1>
+      <p class="subtitle">Arrange the numbers in the correct order</p>
+
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-label">MOVES</span>
+          <strong id="moves">0</strong>
+        </div>
+        <div class="stat">
+          <span class="stat-label">SCORE</span>
+          <strong id="score">1000</strong>
+        </div>
+        <div class="stat">
+          <span class="stat-label">BEST</span>
+          <strong id="best">0</strong>
+        </div>
+      </div>
+
+      <div id="board" class="board" aria-label="Puzzle board"></div>
+
+      <p id="message" class="message" aria-live="polite">
+        Tap a tile next to the empty space
+      </p>
+
+      <div class="buttons">
+        <button id="shuffleBtn" class="btn primary">⟳ Shuffle</button>
+        <button id="newBtn" class="btn secondary">＋ New Game</button>
+      </div>
+    </section>
+
+    <footer>Made with ♥ by PY Gaming</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
