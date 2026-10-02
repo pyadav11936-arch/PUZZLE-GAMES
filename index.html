@@ -4,50 +4,180 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PY Gaming | 8 Puzzle</title>
+  <title>Priyanshu Yadav | Puzzle Zone</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <main class="game-container">
-    <header>
-      <div class="logo">PY <span>GAMING</span></div>
-      <p class="tagline">THINK • MOVE • WIN</p>
-    </header>
+  <!-- TOP NAVIGATION -->
+  <header class="topbar" id="home">
+    <a href="#home" class="brand">
+      <div class="brand-logo">
+        <span class="crown">♛</span>
+        <strong>PY</strong>
+      </div>
+      <div class="brand-name">
+        <h2>PRIYANSHU YADAV</h2>
+        <span>━━　P U Z Z L E　Z O N E　━━</span>
+      </div>
+    </a>
 
-    <section class="game-card">
-      <h1>8 Puzzle</h1>
-      <p class="subtitle">Arrange the numbers in the correct order</p>
+    <nav>
+      <a href="#home">⌂ <span>Home</span></a>
+      <a href="#game" class="active">🎮 <span>Games</span></a>
+      <a href="#about">● <span>About</span></a>
+    </nav>
 
-      <div class="stats">
-        <div class="stat">
-          <span class="stat-label">MOVES</span>
-          <strong id="moves">0</strong>
-        </div>
-        <div class="stat">
-          <span class="stat-label">SCORE</span>
-          <strong id="score">1000</strong>
-        </div>
-        <div class="stat">
-          <span class="stat-label">BEST</span>
-          <strong id="best">0</strong>
+    <div class="slogan">Play<br>Think<br>Win</div>
+  </header>
+
+  <!-- MAIN LAYOUT -->
+  <main class="layout">
+
+    <!-- LEFT PANEL -->
+    <aside class="left-panel panel">
+      <div class="game-logo">
+        <div class="eight">8</div>
+        <div class="puzzle-word">
+          <strong>PUZZLE</strong>
+          <span>GAME</span>
         </div>
       </div>
 
-      <div id="board" class="board" aria-label="Puzzle board"></div>
+      <div class="handwriting">
+        Small Steps<br>Big Thinking
+        <span>♛</span>
+      </div>
 
-      <p id="message" class="message" aria-live="polite">
-        Tap a tile next to the empty space
+      <section class="how-box">
+        <h3>☼ &nbsp; HOW TO PLAY</h3>
+
+        <div class="instruction">
+          <b>1</b>
+          <p>Click a number next to<br>the empty space.</p>
+        </div>
+
+        <div class="instruction">
+          <b>2</b>
+          <p>Move the tiles one by one.</p>
+        </div>
+
+        <div class="instruction">
+          <b>3</b>
+          <p>Arrange the numbers<br>from 1 to 8 to win!</p>
+        </div>
+      </section>
+
+      <section class="quote-box">
+        <span class="quote-mark">“</span>
+        <blockquote>
+          “Better<br>Version<br>Of Me”
+        </blockquote>
+        <cite>– Priyanshu Yadav</cite>
+      </section>
+    </aside>
+
+    <!-- CENTER GAME -->
+    <section class="center-panel" id="game">
+
+      <!-- GAME STATS -->
+      <div class="stats panel">
+        <div class="stat">
+          <span class="stat-icon pink">♟</span>
+          <div>
+            <small>MOVES</small>
+            <strong id="moves">0</strong>
+          </div>
+        </div>
+
+        <div class="stat">
+          <span class="stat-icon gold">🏆</span>
+          <div>
+            <small>SCORE</small>
+            <strong id="score">800</strong>
+          </div>
+        </div>
+
+        <div class="stat">
+          <span class="stat-icon cyan">🎯</span>
+          <div>
+            <small>BEST SCORE</small>
+            <strong id="bestScore">0</strong>
+          </div>
+        </div>
+
+        <div class="stat">
+          <span class="stat-icon pink">★</span>
+          <div>
+            <small>TIME</small>
+            <strong id="time">00:00</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- PUZZLE BOARD -->
+      <div class="board-frame panel">
+        <div id="board" class="board"
+             aria-label="8 puzzle game board"></div>
+      </div>
+
+      <!-- GAME BUTTONS -->
+      <div class="game-buttons">
+        <button id="shuffleBtn" class="action-btn shuffle">
+          <span>⤨</span>
+          <span>
+            New Game
+            <small>(Shuffle)</small>
+          </span>
+        </button>
+
+        <button id="resetBtn" class="action-btn reset">
+          <span>⟳</span>
+          <span>
+            Reset
+            <small>(Start Over)</small>
+          </span>
+        </button>
+
+        <button id="scoresBtn" class="action-btn view">
+          <span>▥</span>
+          <span>View High Scores ›</span>
+        </button>
+      </div>
+
+      <p id="message" class="game-message" aria-live="polite">
+        Click a number next to the empty space to move it.
       </p>
-
-      <div class="buttons">
-        <button id="shuffleBtn" class="btn primary">⟳ Shuffle</button>
-        <button id="newBtn" class="btn secondary">＋ New Game</button>
-      </div>
     </section>
 
-    <footer>Made with ♥ by PY Gaming</footer>
+    <!-- RIGHT PANEL -->
+    <aside class="right-panel panel" id="highScores">
+      <h2 class="score-heading">♛ &nbsp; HIGH SCORES</h2>
+
+      <div id="leaderboard" class="leaderboard"></div>
+
+      <section class="your-score">
+        <div>⭐ &nbsp; YOUR SCORE</div>
+        <strong id="yourScore">800</strong>
+      </section>
+
+      <section class="job-box">
+        <h2>🏆 &nbsp; Great Job!</h2>
+        <p>Keep playing and beat<br>your high score!</p>
+      </section>
+    </aside>
+
   </main>
+
+  <!-- FOOTER -->
+  <footer id="about">
+    <span>© 2026 Priyanshu Yadav</span>
+    <span>|</span>
+    <span>Puzzle Zone</span>
+    <span class="footer-right">
+      Keep Playing　★　Keep Growing　♛
+    </span>
+  </footer>
 
   <script src="script.js"></script>
 </body>
